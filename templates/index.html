@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prediction App</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes slideIn {
+      0% {
+        transform: translateY(100%);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-black text-white mx-5">
+  <header class="bg-red-700 py-4">
+    <div class="container mx-auto flex items-center justify-between">
+        <h1 class="text-5xl font-bold mb-4 ml-16 animate-slideIn">GetHired</h1>
+        <!-- <img src="C:\Users\nagap\Downloads\University Admission Eligibility Predictor\University Admission Eligibility Predictor\templates\university_entrance.png" width="80" height="80" class = "mr-96 animate-slideIn rounded-lg" alt=""> -->
+        <img src="{{url_for('static', filename='university_entrance.png')}}"  width="80" height="80" class = "mr-96 animate-slideIn rounded-lg" />
+      <nav class = "mr-4">
+        <a href="#about_us" class="text-white hover:underline ml-4">About us</a>
+        <a href="#features" class="text-white hover:underline ml-4">Features</a>
+        <a href="#pricing" class="text-white hover:underline ml-4">Pricing</a>
+        <a href="#testimonials" class="text-white hover:underline ml-4">Testimonials</a>
+        <a href="#contact" class="text-white hover:underline ml-4">Contact us</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="bg-red-700 py-16">
+    <div class = "flex flox-row">
+      <div class="container mx-auto ml-4 mt-4">
+        <h1 class="text-4xl font-bold mb-4 animate-slideIn">Welcome to the Placement Prediction App</h1>
+        <p class="text-gray-300 text-lg animate-slideIn">Get accurate predictions for your future placement trials.</p>
+        <p class="text-gray-300 text-lg animate-slideIn">your one stop for all your estimations.</p>
+        <div class="mt-8 animate-slideIn">
+          <a href="prediction" class="bg-white hover:bg-gray-200 text-red-700 py-2 px-4 rounded">Predict now</a>
+
+        </div>
+      </div>
+      <div class="mr-8 rounded-lg">
+        <!-- <img src="C:\Users\nagap\Downloads\University Admission Eligibility Predictor\University Admission Eligibility Predictor\templates\student.jpg" width="700" height="350" class="mr-12 rounded-lg" alt=""> -->
+        <img src="{{url_for('static', filename='student.jpg')}}" width="700" height="350" class = "mr-12 rounded-lg" />
+    </div>
+    </div>
+    </section>
+
+    <section id="about_us" class="py-16">
+        <div class="container mx-auto">
+          <h2 class="text-3xl font-bold mb-8 animate-slideIn">About us</h2>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-1 gap-8">
+            <div class="bg-red-800 p-8 rounded animate-slideIn">
+              <p class="text-gray-300">Welcome to GetHired! We are a dedicated platform that aims to provide accurate and reliable placement predictions for students. Our unique algorithm takes into account various factors such as academic performance, skillset, and work experience to determine the likelihood of getting placed in a desired job.</p>
+              <p class="text-gray-300">With our user-friendly interface, students can easily enter their details, including educational qualifications, internships, projects, and more. Our advanced prediction model then analyzes this data to generate personalized placement forecasts. By leveraging data-driven insights and statistical analysis, we strive to empower students with valuable information that can guide their career decisions and boost their employability.</p>
+              <p class="text-gray-300">Our team of experts continuously updates and fine-tunes our predictive algorithms to ensure the highest level of accuracy. Whether you are a fresh graduate or an experienced professional seeking better career prospects, GetHired is here to assist you in making informed choices and charting a successful career path.</p>
+              <p class="text-gray-300">Explore our platform, enter your details, and discover your placement potential today. Trust in GetHired to help you navigate the competitive job market and increase your chances of securing your dream job. Together, let's unlock a brighter future!"</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <section id="features" class="py-16">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-8 animate-slideIn">Features</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-red-800 p-8 rounded animate-slideIn">
+            <h3 class="text-xl font-bold mb-4">Personalized Placement Insights</h3>
+            <p class="text-gray-300">Provide users with a detailed report on their chances of getting placed by analyzing their academic performance, work experience, skills, and other relevant information. This feature could also offer personalized suggestions on how users can improve their employability and chances of getting placed.</p>
+          </div>
+          <div class="bg-red-800 p-8 rounded animate-slideIn">
+            <h3 class="text-xl font-bold mb-4">Real-Time Job Listings</h3>
+            <p class="text-gray-300">Integrate a job portal with your platform to give users access to real-time job listings based on their preferences and qualifications. This feature could also allow users to filter jobs by criteria such as salary, location, industry, or job type.</p>
+          </div>
+          <div class="bg-red-800 p-8 rounded animate-slideIn">
+            <h3 class="text-xl font-bold mb-4">Resume Builder</h3>
+            <p class="text-gray-300">Create a feature that allows users to easily create and customize professional resumes that can help them stand out from the competition. This feature could include templates, smart suggestions for improving the quality of the user's resume, and tips on how to optimize it for various job applications.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section id="pricing" class="bg-red-900 py-16">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-8 mt-2 ml-4 animate-slideIn">Pricing</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 ml-4 mr-4 gap-8">
+          <div class="bg-red-800 p-8 rounded animate-slideIn">
+            <h3 class="text-xl font-bold mb-4">Basic</h3>
+            <p class="text-white-300">
+                <ul class="text-white-600">
+                    <li>&#x2022; Personalized course recommendations</li>
+                    <li>&#x2022; Limited access to predictive analytics</li>
+                    <li>&#x2022; Career path guidance</li>
+                    <li>&#x2022; Email support</li>
+                  </ul>
+                  <p class="mt-4 mb-4 text-2xl font-bold">$9.99/month</p>
+                  <a href="#" class="mt-4 bg-white hover:bg-gray-200 text-red-700 py-2 px-4 rounded">Get Started</a>
+                
+            </p>
+
+          </div>
+          <div class="bg-red-800 p-8 rounded animate-slideIn">
+            <h3 class="text-xl font-bold mb-4">Pro</h3>
+            <ul class="text-white-600">
+                <li>&#x2022; Enhanced personalized course recommendations</li>
+                <li>&#x2022; Expanded access to predictive analytics</li>
+                <li>&#x2022; Detailed performance analysis and insights</li>
+                <li>&#x2022; Priority email support</li>
+            </ul>
+            <p class="mt-4 mb-4 text-2xl font-bold">$19.99/month</p>
+            <a href="#" class="mt-4 bg-white hover:bg-gray-200 text-red-700 py-2 px-4 rounded">Get Started</a>
+          </div>
+          <div class="bg-red-800 p-8 rounded animate-slideIn">
+            <h3 class="text-xl font-bold mb-4">Premium</h3>
+            <ul class="text-gray-200">
+                <li>&#x2022; Comprehensive personalized course recommendations</li>
+                <li>&#x2022; Full access to predictive analytics</li>
+                <li>&#x2022; Advanced performance tracking and recommendations</li>
+                <li>&#x2022; Priority email and chat support</li>
+                <li>&#x2022; Exclusive access to premium career resources and networking opportunities</li>
+            </ul>
+            <p class="mt-4 mb-4 text-2xl font-bold">$29.99/month</p>
+            <a href="#" class="mt-4 bg-white hover:bg-gray-200 text-red-700 py-2 px-4 rounded">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="testimonials" class="py-16">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-8 animate-slideIn">Testimonials</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-red-800 p-8 rounded animate-slideIn">
+            <p class="text-gray-300 italic">"Thanks to GetHired !!, I was able to gauge my placement potential accurately. The personalized insights and recommendations helped me identify the areas where I needed improvement, and the real-time job listings were extremely helpful in finding suitable opportunities. I'm happy to say that with the guidance from this platform, I secured a job in my dream company!"</p>
+            <p class="mt-4 font-bold">- Sarah Thompson - Engineering Student</p>
+          </div>
+          <div class="bg-red-800 p-8 rounded animate-slideIn">
+            <p class="text-gray-300 italic">"I highly recommend GetHired to every graduate seeking placement assistance. The prediction accuracy was impressive, and the platform provided valuable suggestions on how to enhance my employability. The resume builder feature helped me create a professional resume that stood out in job applications. Thanks to this website, I landed my first job and kick-started my career on a positive note!"</p>
+            <p class="mt-4 font-bold">- John Carter - Fresh Graduate</p>
+          </div>
+          <div class="bg-red-800 p-8 rounded animate-slideIn">
+            <p class="text-gray-300 italic">"Finding a new job in a different field can be overwhelming, but (Your Website Name) made it so much easier for me. The personalized placement insights and real-time job listings tailored to my qualifications and interests were invaluable. The platform gave me the confidence to pursue a career change, and I'm now successfully working in my new profession. Thank you, GetHired, for helping me achieve my goals!"</p>
+            <p class="mt-4 font-bold">- Emily Roberts - Career Changer</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="bg-red-700 py-16">
+      <div class="container mx-auto">
+        <h2 class="text-3xl font-bold mb-8 animate-slideIn ml-4 flex justify-center">Contact Us</h2>
+        <p class="text-gray-300 mb-4 animate-slideIn ml-4 flex justify-center">Have a question or need support? Reach out to us!</p>
+        <form class="animate-slideIn align-items-center">
+            <div class = "flex flex-col ">
+          <div class="flex flex-col md:flex-row ml-4 justify-center">
+            <input type="text" placeholder="Your Name" class="bg-red-800 rounded py-2 px-4 mb-4 md:mr-4">
+            <input type="email" placeholder="Your Email" class="bg-red-800 rounded py-2 px-4 mb-4 md:mr-4">
+          </div>
+          <div class = "flex justify-center"><textarea placeholder="Your Message" rows="10" cols="55" class="bg-red-800 rounded py-2 px-4 ml-4 mb-4"></textarea></div>
+          
+          <div class="flex justify-center"><button type="submit" class="bg-white hover:bg-gray-200 text-red-700 py-2 px-4 rounded ml-100">Submit</button></div></div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="bg-red-900 py-4">
+    <div class="container mx-auto text-center">
+      <p class="text-gray-300 animate-slideIn">© 2023 Prediction App. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const elements = document.querySelectorAll(".animate-slideIn");
+      elements.forEach(function (element) {
+        element.style.animation = "slideIn 0.5s ease-in-out";
+      });
+    });
+  </script>
+</body>
+
+</html>
